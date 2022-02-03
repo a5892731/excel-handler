@@ -25,7 +25,6 @@ class OutputFile(File):
                                           }
         self.summary_table_values = {}
 
-
     def handle_input_file(self, input_dict):
         '''this function contains all actions for one input file'''
 
@@ -46,14 +45,12 @@ class OutputFile(File):
         get_input_row_data(input_dict)
         add_row_to_work_sheet()
 
-
     def save_file(self, filename = 'output_file.xlsx', path = '../output', sheet_name='Arkusz1'):
         self.wb.save(filename = path + '/' + filename)
 
     def __del__(self):
         '''save file'''
         print('output saved')   # - <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TO DO
-
 
 '''------------------------------------------------------------------------------------------------------------------'''
 
@@ -69,14 +66,10 @@ if __name__ == '__main__':
                   'Transakcja': 20220203131100,
                   'Suma': 77}
 
-
-
     file = OutputFile()
     file.handle_input_file(input_dict)
     print(file.main_table_rows_values)
 
-
     file.save_file()
-
 
     print()

@@ -6,7 +6,8 @@ class InputFile(File):
         super().__init__(filename, path, sheet_name)
 
         '''sheet variables'''
-        self.sheet_coordinates = {'Adres':'H2',
+        self.sheet_coordinates = {'Klient': 'H1',
+                                  'Adres':'H2',
                                   'Faktura': 'H3',
                                   'Przesyłka': 'H4',
                                   'Status': 'H5',
@@ -37,6 +38,8 @@ class InputFile(File):
             for row in range(start_row, stop_row + 1):
                 cell_data = sheet_ranges[column + str(row)].value
                 value, opertion = get_mathematical_operation(cell_data, sheet_ranges)
+                if value == None:
+                    value = 0
                 sum += value
             return sum
 
