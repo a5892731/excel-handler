@@ -79,7 +79,7 @@ if __name__ == '__main__':
     print("start")
     print()
 
-    file = InputFile('file 1.xlsx')
+    file = InputFile('file 1.xlsx',)
     print(file.sheet_values)
 
     print()

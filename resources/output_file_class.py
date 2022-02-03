@@ -46,11 +46,12 @@ class OutputFile(File):
         add_row_to_work_sheet()
 
     def save_file(self, filename = 'output_file.xlsx', path = '../output', sheet_name='Arkusz1'):
+        '''save file'''
         self.wb.save(filename = path + '/' + filename)
 
     def __del__(self):
-        '''save file'''
-        print('output saved')   # - <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TO DO
+        ''''''
+        print('output saved')
 
 '''------------------------------------------------------------------------------------------------------------------'''
 
